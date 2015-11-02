@@ -1,0 +1,182 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[8pt]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{tabularx}  % for 'tabularx' environment and 'X' column type
+\usepackage{ragged2e}  % for '\RaggedRight' macro (allows hyphenation)
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X} 
+
+\setcounter{figure}{0}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[R \& D]{R \& D\\About the Reader} % The short title appears at the bottom of every slide, the full title is only on the title page
+\author{Bastian Lang} % Your name
+\institute[BRSU] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Master of Autonomous Systems \\ % Your institution for the title page
+}
+\date{April 6, 2015} 
+
+\begin{document}
+
+
+\listoffigures
+\begin{frame}
+\titlepage 
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Reader Profile}
+	Who will be the typical reader of the report?
+	\begin{itemize}
+		\item Researchers/students in the field of computer science, evolutionary robotics and energy efficient vehicle control with a good mathematical background
+	\end{itemize}
+	Who should be able to understand at least half of it?
+	\begin{itemize}
+		\item Anyone that understand the high level concepts of evolutionary algorithms, artificial neural networks (and some basic physics)
+		\item Anyone with the ability to understand and follow abstract concepts, algorithms and ideas.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Reader Profile}
+	What knowledge do you expect the reader to have on a...
+	\begin{itemize}
+		\item General level
+		\begin{itemize}
+			\item ANNs can be used for control tasks
+			\item EAs can be used to design ANNs
+			\item There are algorithms to apply EAs to ANNs
+			\item literature: -none specific-
+		\end{itemize}
+		
+		\item More Specific Level
+		\begin{itemize}
+			\item EAs can evolve the weights and the topology of an ANN w.r.t. a given task
+			\item literature: -none specific-
+		\end{itemize}
+		\item Detailed Level
+		\begin{itemize}
+			\item -none-
+			\item literature: -none specific-
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What shall the reader gain/learn?\\General Level}
+\begin{itemize}
+	\item SOA approaches use Graph Search
+	\item ANNs are able to outperform Graph Search approaches
+	\item Transferring solutions onto real devices is non-trivial
+	\item ANNs can be evolved for optimal energy efficient control
+	\item Evolved ANNs have not been used on real devices for energy efficient vehicle control so far
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What shall the reader gain/learn?\\Specific Level}
+\begin{itemize}
+	\item Graph Search approaches have memory problems
+	\item ANNs do not need much storage
+	\item Problem with reality gap stems from inaccurate simulations
+	\item Accurate simulations need too much computation time and memory
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What shall the reader gain/learn?\\Detailed Level}
+\begin{itemize}
+	\item The higher the level of discretization the more memory Graph Search does need
+	\item ANNs are do not require a previous discretization of the problem
+	\item NEAT is an SOA approach that can be used to design an ANN for energy efficient vehicle control
+	\item The reality gap can shrink using more elaborate motor models
+	\item The transferability approach can minimize the reality gap
+\end{itemize}
+\end{frame}
+
+
+\end{document} 
