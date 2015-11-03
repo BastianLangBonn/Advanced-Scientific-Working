@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.18)  26 OCT 2015 19:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.18)  27 OCT 2015 17:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -579,16 +579,27 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for TS1+futs on input line 77.
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 80.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/ts1futs.fd
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 )
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 96.
- [2] [3] [4]
-(./reading_report_1.aux) ) 
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 99.
+ [2] [3]
+Overfull \hbox (5.89499pt too wide) in paragraph at lines 147--148
+\T1/futs/m/n/10.95 ing the re-al-ity gap in evo-lu-tion-ary robotics. Evo-lu-ti
+on-ary Com-pu-ta-tion, IEEE Trans-
+ []
+
+
+Overfull \hbox (3.97548pt too wide) in paragraph at lines 153--154
+[]\T1/futs/m/n/10.95 The au-thors were able to show that us-ing evo-lu-tion-ary
+ al-go-rithms for op-ti-miz-ing energy-
+ []
+
+[4] (./reading_report_1.aux) ) 
 Here is how much of TeX's memory you used:
  5150 strings out of 493304
  74401 string characters out of 6139871
@@ -596,11 +607,11 @@ Here is how much of TeX's memory you used:
  8482 multiletter control sequences out of 15000+600000
  73074 words of font info for 72 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 47i,10n,47p,254b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8
-r.enc}</usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb>
-Output written on reading_report_1.pdf (4 pages, 27414 bytes).
+ 47i,10n,47p,550b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ba
+se/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb>
+Output written on reading_report_1.pdf (4 pages, 30274 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  17 compressed objects within 1 object stream

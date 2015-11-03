@@ -71,6 +71,9 @@ Evolving Look Ahead Controllers for Energy Optimal Driving and Path Planning % T
 
 \newpage
 
+\section{Reference}
+Gaier, A., \& Asteroth, A. (2014, June). Evolving look ahead controllers for energy optimal driving and path planning. In Innovations in Intelligent Systems and Applications (INISTA) Proceedings, 2014 IEEE International Symposium on (pp. 138-145). IEEE.
+
 \section{Reading Report}
 \subsection{Problem Formulation}
 \begin{itemize}
@@ -136,6 +139,18 @@ Evolving Look Ahead Controllers for Energy Optimal Driving and Path Planning % T
 \end{itemize}
 
 \subsection{Scientific Deficit}
+\begin{itemize}
+	\item The approach taken uses a very popular algorithm from evolutionary algorithms, but it does not use any techniques to ensure that the evolved controller will be able to run on a real device. Where the authors can give a prove of concept that an evolutionary algorithm may be better suited than a graph search approach, like this it probably is not usable in practise. Although giving prove of concept was the author's goal and this is not a scientific deficit but a shortcoming of this approach so far. 
+	\begin{itemize}
+		\item Miglino, O., Lund, H. H., \& Nolfi, S. (1995). Evolving mobile robots in simulated and real environments. Artificial life, 2(4), 417-434.
+	\item Jakobi, N., Husbands, P., \& Harvey, I. (1995). Noise and the reality gap: The use of simulation in evolutionary robotics. In Advances in artificial life (pp. 704-720). Springer Berlin Heidelberg.
+	\item Koos, S., Mouret, J. B., \& Doncieux, S. (2013). The transferability approach: Crossing the reality gap in evolutionary robotics. Evolutionary Computation, IEEE Transactions on, 17(1), 122-145.
+	\end{itemize}
+\end{itemize}
 
 \subsection{Scientific Contribution}
+\begin{itemize}
+	\item The authors were able to show that using evolutionary algorithms for optimizing energy-efficient driving outperforms graph search algorithms in terms of computation time and space needed and produces solutions that are nearly as optimal as solutions from very detailed graph search algorithms.
+	\item As for this paper is very recent (2014) I am not able to quote any other work that supports my statement. Citeseer does not know this paper yet and google just gives one quote from a paper of the same authors.
+\end{itemize}
 \end{document}
