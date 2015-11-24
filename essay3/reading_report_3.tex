@@ -1,0 +1,159 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{graphicx}
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{BRSU} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Advanced Scientific Working\\-Essay-\\
+Explicit Fuel Optimal Speed Profiles for Heavy Trucks on a Set of Topographic Road Profiles % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Bastian Lang} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+\newpage
+
+\section{Reference}
+Froeberg, Anders, Erik Hellstroem, and Lars Nielsen. Explicit fuel optimal speed profiles for heavy trucks on a set of topographic road profiles. No. 2006-01-1071. SAE Technical Paper, 2006.
+
+\section{Abstract}
+
+
+The problem addressed is how to drive a heavy truck over various road topographies such that the fuel consumption is minimized. Using a realistic model of a truck powertrain, an optimization problem for minimization of fuel consumption is formulated. Through the solutions of this problem optimal speed profiles are found. An advantage here is that explicit analytical solutions can be found, and this is done for a few constructed test roads. The test roads are constructed to be easy enough to enable analytical solutions but still capture the important properties of real roads. In this way the obtained solutions provide explanations to some behaviour obtained by ourselves and others using more elaborate modeling and numeric optimization like dynamic programming.\vspace{5mm}
+
+The results show that for level road and in small gradients the optimal solution is to drive with constant speed. For large gradients in downhill slopes it is optimal to utilize the kinetic energy of the vehicle to accelerate in order to gain speed. This speed increase is used to lower the speed on other road sections such that the total average speed is kept. Taking account for limitations of top speed the optimal speed profile changes to a strategy that minimizes brake usage. This is done by e.g. slowing down before steep down gradients were the truck will accelerate even though the engine does not produce any torque.
+
+
+\newpage
+\section{Essay}
+\subsection{What is the paper about?}
+\begin{itemize}
+	\item How to drive a truck such that the fuel consumption is minimized?
+	\item Finding an optimal strategy.
+	\item Understanding of the energy usage of a heavy truck.
+	\item Proving the correctness of previous results mathematically.
+\end{itemize}
+
+\subsection{Why is this relevant?}
+\begin{itemize}
+	\item Fuel is a large part of the operating costs of heavy trucks.
+\end{itemize}
+
+\subsection{What have others done and why is this not sufficient?}
+\begin{itemize}
+	\item Use of simple models.
+	\item Use optimal control theory approach (e.g. dynamic programming)\\ $\rightarrow$ approximate solutions	
+\end{itemize}
+
+\subsection{What have the author's done and why is this better?}
+\begin{itemize}
+	\item Analytical derivation of efficient driving behaviour using a physical model of a heavy truck that can predict the fuel consumption while being manageable complex.
+	\item Used model is very accurate and consists of:
+	\begin{itemize}
+		\item Engine
+		\item Transmission
+		\item Final Gear
+		\item Wheels and Chassis
+	\end{itemize}
+\end{itemize}
+
+
+
+\subsection{How did they evaluate their solution?}
+\begin{itemize}
+	\item The authors did not do a an evaluation in the sense of a simulation or real world experiments. Instead they created the physical model of a heavy truck and derived different optimal behaviour for different situations.
+	\item They showed that:
+	\begin{itemize}
+		\item for level roads maintaining a constant speed is optimal
+		\item for small gradients maintaining a constant speed is optimal	
+		\item for steep uphill slopes maximum fuelling is optimal
+		\item for steep downhill slopes cutting off fuel until desired velocity is reached afterwards is optimal
+		\item when considering a maximum speed cutting of fuel to decelerate some time before the downhill slope to reach maximum velocity at the end of the slope is optimal. This point can be calculated.
+	\end{itemize}	 
+	
+\end{itemize}
+
+\subsection{Scientific Deficit}
+\begin{itemize}
+	\item No use of other economic factors apart from fuel consumption\\
+	\begin{itemize}
+		\item \textit{Passenberg, Benjamin, Peter Kock, and Olaf Stursberg. "Combined time and fuel optimal driving of trucks based on a hybrid model." Control Conference (ECC), 2009 European. IEEE, 2009.}
+	\end{itemize}
+	
+	\item Not applicable to unknown tracks
+	\begin{itemize}
+		\item \textit{Sahlholm, Per, et al. "A sensor and data fusion algorithm for road grade estimation." 5th IFAC Symposium on Advances in Automotive Control (2007). 2007.}
+	\end{itemize}
+\end{itemize}
+
+\subsection{Scientific Contribution}
+\begin{itemize}
+	\item Fuel optimal solution for sufficiently small gradients is to keep speed constant
+	\begin{itemize}
+		\item \textit{Ivarsson, Maria, Jan Aslund, and Lars Nielsen. "Look-ahead control-consequences of a non-linear fuel map on truck fuel consumption." Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering 223.10 (2009): 1223-1238.}
+	\end{itemize}
+	\item Find optimal strategy for known tracks
+	\begin{itemize}
+		\item \textit{Sahlholm, Per, et al. "A sensor and data fusion algorithm for road grade estimation." 5th IFAC Symposium on Advances in Automotive Control (2007). 2007.}
+	\end{itemize}
+	
+\end{itemize}
+\end{document}
