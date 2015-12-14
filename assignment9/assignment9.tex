@@ -88,7 +88,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[R \& D]{R \& D\\Second two Ws} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Assignment 9]{ASW\\Assignment 9} % The short title appears at the bottom of every slide, the full title is only on the title page
 \author{Bastian Lang} % Your name
 \institute[BRSU] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
@@ -110,98 +110,82 @@ Master of Autonomous Systems \\ % Your institution for the title page
 
 
 \begin{frame}
-	\frametitle{Practical design of minimal energy controls for an electric bicycle}
-	\textit{Grossoleil, David, and Dominique Meizel. "Practical design of minimal energy controls for an electric bicycle." 9th International Conference on Modeling, Optimization \& SIMulation. 2012.}\vspace{5mm}
-	
-	Approach
+	\frametitle{Criteria for reviewing a paper}
 	\begin{itemize}
-		\item Discretization of search space 
-		\item Build search graph
-		\item Use A* to find minimal cost path
-		\item Use heuristic based on friction, air drag, kinetic energy and potential energy
+		\item Do the authors make clear what the paper is about in the beginning?
+		\item Reasons given why related work is not sufficient?
+		\item Approach explained properly?
+		\item Sufficient experiments that supports their intent?
+		\begin{itemize}
+			\item Compared to other algorithms?
+			\item Special cases?
+			\item ...
+		\end{itemize}
+		\item Conclusions based on experiments?
+		\item Style of writing clear?
 	\end{itemize}
-	
-	Deficits
-	\begin{itemize}
-		\item Graph search approach requires discretization of search space
-		\item The higher the rate of discretization, the more complex (especially space)
-	\end{itemize}
-	
-	Contributions
-	\begin{itemize}
-		\item Drastically reduced the search space for graph search approach
-	\end{itemize}
+
 \end{frame}
 
 \begin{frame}
-	\frametitle{Explicit fuel optimal speed profiles for heavy trucks on a set of topographic road profiles}
-	\textit{Froeberg, Anders, Erik Hellstroem, and Lars Nielsen. Explicit fuel optimal speed profiles for heavy trucks on a set of topographic road profiles. No. 2006-01-1071. SAE Technical Paper, 2006.}\vspace{5mm}
-	
-	Approach
+	\frametitle{Evolving neural networks through augmenting topologies.}
+	\textit{Stanley, Kenneth O., and Risto Miikkulainen. "Evolving neural networks through augmenting topologies." Evolutionary computation 10.2 (2002): 99-127.}\vspace{5mm}
+	Likes:
 	\begin{itemize}
-		\item Usage of a physical model to derive efficient driving behaviour
-		\item Take model situations compute the optimal fuel supply
+		\item Detailed and extensive evaluation
 		\begin{itemize}
-			\item level road
-			\item small gradients
-			\item high uphill slopes
-			\item high downhill slopes
+			\item Analysis of importance of each of introduced mechanisms
+		\end{itemize}
+		\item Well explained and impressive approach
+		\begin{itemize}
+			\item Good justification of each mechanism
 		\end{itemize}
 	\end{itemize}
 	
-	Deficit
-	\begin{itemize}
-		\item Not applicable to unknown tracks
-	\end{itemize}
-	
-	Contribution
-	\begin{itemize}
-		\item Optimal control can be achieved using only three different motor controls
-		\begin{itemize}
-			\item Roll
-			\item Speed
-			\item Cruise
-		\end{itemize}
-	\end{itemize}
+
 \end{frame}
 
+\begin{frame}
+	\frametitle{The transferability approach: Crossing the reality gap in evolutionary robotics.}
+	\textit{Koos, Sylvain, Jean-Baptiste Mouret, and Stéphane Doncieux. "The transferability approach: Crossing the reality gap in evolutionary robotics." Evolutionary Computation, IEEE Transactions on 17.1 (2013): 122-145.}\vspace{5mm}
+	Likes:
+	\begin{itemize}
+		\item Sophisticated analysis of the results
+		\begin{itemize}
+			\item Reasons for difference of different approaches
+		\end{itemize}
+		\item Good presentations of results
+		\begin{itemize}
+			\item Many visualizing figures 
+		\end{itemize}
+		\item Good explanation of approach
+		\item Extensive state of the art discussion
+	\end{itemize}
+	
+\end{frame}
 
 \begin{frame}
 	\frametitle{Evolving Look Ahead Controllers for Energy
 Optimal Driving and Path Planning}
 \textit{Gaier, Adam, and Alexander Asteroth. "Evolving look ahead controllers for energy optimal driving and path planning." Innovations in Intelligent Systems and Applications (INISTA) Proceedings, 2014 IEEE International Symposium on. IEEE, 2014.}\vspace{5mm}
 
-Approach
-\begin{itemize}
-	\item Use evolved neural network for energy efficient vehicle control in simulation
-	\item Use simple, but continuous model
-	\item Use only three commands: Roll, Speed, Cruise
-	\item Use SOA approach NEAT
+	Likes:
 	\begin{itemize}
-		\item Optimization of topology and weights of a neural network
-		\item Starts with minimal topologies and complexifies them
-		\item Uses special form of cross-over operator
-		\item Promotes novel solutions
+		\item Good state of the art discussion
+		\begin{itemize}
+			\item deficits/contributions of other approaches
+		\end{itemize}
+		\item Well explained approach
+		\begin{itemize}
+			\item Description of all involved approaches
+		\end{itemize}
+		\item Logical composition of paper
+		\item Thorough analysis of results
 	\end{itemize}
-	
-\end{itemize}
-Deficits
-\begin{itemize}
-	\item Proof of concept evaluated in simulation $\rightarrow$ Probably has to be modified to be usable in reality (Reality Gap)
-	\begin{itemize}
-		\item Use more detailed models of vehicle and environment
-		\item Use transferability approach
-	\end{itemize}
-\end{itemize}	
 
-Contributions
-\begin{itemize}
-	\item Controller that is adaptable and has a very low space complexity
-\end{itemize}
+
 	
 \end{frame}
-
-
 
 
 \end{document} 
