@@ -1,0 +1,191 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[8pt]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{tabularx}  % for 'tabularx' environment and 'X' column type
+\usepackage{ragged2e}  % for '\RaggedRight' macro (allows hyphenation)
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X} 
+
+\setcounter{figure}{0}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Assignment 9]{ASW\\Assignment 9} % The short title appears at the bottom of every slide, the full title is only on the title page
+\author{Bastian Lang} % Your name
+\institute[BRSU] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Master of Autonomous Systems \\ % Your institution for the title page
+}
+\date{April 6, 2015} 
+
+\begin{document}
+
+
+\listoffigures
+%\begin{frame}
+%\titlepage 
+%\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+
+\begin{frame}
+	\frametitle{Criteria for reviewing a paper}
+	\begin{itemize}
+		\item Do the authors make clear what the paper is about in the beginning?
+		\item Reasons given why related work is not sufficient?
+		\item Approach explained properly?
+		\item Sufficient experiments that supports their intent?
+		\begin{itemize}
+			\item Compared to other algorithms?
+			\item Special cases?
+			\item ...
+		\end{itemize}
+		\item Conclusions based on experiments?
+		\item Style of writing clear?
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Evolving neural networks through augmenting topologies.}
+	\textit{Stanley, Kenneth O., and Risto Miikkulainen. "Evolving neural networks through augmenting topologies." Evolutionary computation 10.2 (2002): 99-127.}\vspace{5mm}
+	Likes:
+	\begin{itemize}
+		\item Detailed and extensive evaluation
+		\begin{itemize}
+			\item Analysis of importance of each of introduced mechanisms
+		\end{itemize}
+		\item Well explained and impressive approach
+		\begin{itemize}
+			\item Good justification of each mechanism
+		\end{itemize}
+	\end{itemize}
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{The transferability approach: Crossing the reality gap in evolutionary robotics.}
+	\textit{Koos, Sylvain, Jean-Baptiste Mouret, and Stéphane Doncieux. "The transferability approach: Crossing the reality gap in evolutionary robotics." Evolutionary Computation, IEEE Transactions on 17.1 (2013): 122-145.}\vspace{5mm}
+	Likes:
+	\begin{itemize}
+		\item Sophisticated analysis of the results
+		\begin{itemize}
+			\item Reasons for difference of different approaches
+		\end{itemize}
+		\item Good presentations of results
+		\begin{itemize}
+			\item Many visualizing figures 
+		\end{itemize}
+		\item Good explanation of approach
+		\item Extensive state of the art discussion
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Evolving Look Ahead Controllers for Energy
+Optimal Driving and Path Planning}
+\textit{Gaier, Adam, and Alexander Asteroth. "Evolving look ahead controllers for energy optimal driving and path planning." Innovations in Intelligent Systems and Applications (INISTA) Proceedings, 2014 IEEE International Symposium on. IEEE, 2014.}\vspace{5mm}
+
+	Likes:
+	\begin{itemize}
+		\item Good state of the art discussion
+		\begin{itemize}
+			\item deficits/contributions of other approaches
+		\end{itemize}
+		\item Well explained approach
+		\begin{itemize}
+			\item Description of all involved approaches
+		\end{itemize}
+		\item Logical composition of paper
+		\item Thorough analysis of results
+	\end{itemize}
+
+
+	
+\end{frame}
+
+
+\end{document} 

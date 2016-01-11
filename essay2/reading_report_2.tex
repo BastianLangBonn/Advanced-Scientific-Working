@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{graphicx}
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{BRSU} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Advanced Scientific Working\\-Essay-\\
+Evolving neural networks through augmenting topologies % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Bastian Lang} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+\newpage
+
+\section{Reference}
+Stanley, K. O., \& Miikkulainen, R. (2002). Evolving neural networks through augmenting topologies. Evolutionary computation, 10(2), 99-127.
+
+\section{Abstract}
+An important question in neuroevolution is how to gain an advantage from evolving neural network topologies along with weights. We present a method, NeuroEvolution of Augmenting Topologies (NEAT), which outperforms the best fixed-topology method on a challenging benchmark reinforcement learning task. We claim that the increased efficiency is due to (1) employing a principled method of crossover of different topologies, (2) protecting structural innovation using speciation, and (3) incrementally growing from minimal structure. We test this claim through a series of ablation studies that demonstrate that each component is necessary to the system as a whole and to each other. What results is signicantly faster learning. NEAT is also an important contribution to GAs because it shows how it is possible for evolution to both optimize and complexify solutions simultaneously, offering the possibility of evolving increasingly complex solutions over generations, and strengthening the analogy with biological evolution.
+
+
+\section{Essay}
+\subsection{What is the paper about?}
+\begin{itemize}
+	\item A new algorithm called NEAT for neuroevolution (NE), i.e. the design of an artificial neural network using evolutionary techniques
+\end{itemize}
+
+\subsection{Why is this relevant?}
+\begin{itemize}
+	\item NE has shown to be faster and more efficient than reinforcement learning methods on tasks as single pole-balancing and robot arm control
+	\item NE is effective in continuous and high dimensional state spaces
+	\item Memory can easily be represented through recurrent neural networks, which makes NE a natural choice for non-Markovian tasks.
+\end{itemize}
+
+\subsection{What have others done and why is this not sufficient?}
+\begin{itemize}
+	\item Topology of ANN chosen before the experiment
+	\item Research on algorithms that evolved the topology/structure of an ANN provided inconclusive answers about why evolving the topology is superior to using fixed topologies
+	\begin{itemize}
+		\item Evolving topology lead to solving the hardest pole-balancing task so far, but could be achieved with randomly initialized topologies afterwards five times faster.
+	\end{itemize}
+	\item Evolving topology and weights significantly enhances the performance of NE
+\end{itemize}
+
+\subsection{What have the author's done and why is this better?}
+\begin{itemize}
+	\item Introduction of NeuroEvolution of Augmented Topologies (NEAT)
+	\begin{itemize}
+		\item Use of historical markings to keep track of the same genes in different solutions $\rightarrow$ Allows for an easy and meaningful application of the cross-over operator
+		\item Using speciation, i.e. compute the similarity of solutions and share their fitness if similar enough $\rightarrow$ Protection of new innovative solutions to give them time to develop their potential
+		\item Start with minimal solution and grew them more and more complex $\rightarrow$ Algorithm will search low dimensional search space first which enhances performance
+	\end{itemize}
+\end{itemize}
+
+
+
+\subsection{How did they evaluate their solution?}
+\begin{itemize}
+	\item Comparison to SOA approaches in the creation of XOR gates $\rightarrow$ NEAT could outperform the other methods
+	\item Comparison to SOA approaches in a double pole-balancing task $\rightarrow$ NEAT could outperform the other methods
+	\item Tested necessity of cross-over $\rightarrow$ Significantly more evaluations needed to find a solution
+	\item Tested necessity of speciation $\rightarrow$ Failure in about 25\% and about seven times more runtime
+	\item Tested necessity of complexification $\rightarrow$ Fixed ANN successful in about 20\% and about 8.5 times slower
+\end{itemize}
+
+\subsection{Scientific Deficit}
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\subsection{Scientific Contribution}
+\begin{itemize}
+	\item Method to optimize architecture and weights
+	\begin{itemize}
+		\item Chen, Yuehui, et al. "Time-series forecasting using flexible neural tree model." Information sciences 174.3 (2005): 219-235.
+		\item Whiteson, Shimon, and Peter Stone. "Evolutionary function approximation for reinforcement learning." The Journal of Machine Learning Research 7 (2006): 877-917.
+		\item Clune, Jeff, et al. "Evolving coordinated quadruped gaits with the HyperNEAT generative encoding." Evolutionary Computation, 2009. CEC'09. IEEE Congress on. IEEE, 2009.
+	\end{itemize}
+	\item Approach to overcome "course of dimensionality"
+	\begin{itemize}
+		\item Togelius, Julian, et al. "Search-based procedural content generation: A taxonomy and survey." Computational Intelligence and AI in Games, IEEE Transactions on 3.3 (2011): 172-186.
+	\end{itemize}
+\end{itemize}
+\end{document}

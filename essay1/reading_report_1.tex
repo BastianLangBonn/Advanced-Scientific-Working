@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{graphicx}
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{BRSU} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Advanced Scientific Working\\-Reading Report-\\
+Evolving Look Ahead Controllers for Energy Optimal Driving and Path Planning % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Bastian Lang} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+\newpage
+
+\section{Reference}
+Gaier, A., \& Asteroth, A. (2014, June). Evolving look ahead controllers for energy optimal driving and path planning. In Innovations in Intelligent Systems and Applications (INISTA) Proceedings, 2014 IEEE International Symposium on (pp. 138-145). IEEE.
+
+\section{Reading Report}
+\subsection{Problem Formulation}
+\begin{itemize}
+	\item Developing techniques for near energy-optimal control of vehicles using controllers that base their decisions on characteristics of the road.
+	\item Developing control strategies that make the best use of the terrain.
+\end{itemize}
+
+\subsection{Why is this still a problem?}
+\begin{itemize}
+	\item Engineering of transport systems resulted in efficient designs, but further optimizations are diminishing.
+	\item Driver-training programs have yielded impressive results.
+	\item Instead of being reduced, emissions caused by transportation drastically increased in 2005 and 2007.
+\end{itemize}
+
+\subsection{State of the art}
+\begin{itemize}
+	\item Energy-optimal control of commercial trucks and trains
+	\item Energy-optimal control of experimental vehicles
+	\item Energy-optimal control of hybrid gas-electric vehicles
+	\item Finding fuel-optimal behavior of an experimental fuel-cell vehicle using optimal control theory and a simplified model of environment and vehicle
+	\item It was found that only three commands are needed to produce an optimal strategy:
+	\begin{itemize}
+		\item full power
+		\item maintain velocity
+		\item coast
+	\end{itemize}
+	\item Reformulating the problem as a graph-search problem using A* and a special heuristic the number of nodes needed could be drastically decreased with still achieving near-optimal solutions
+	\item Using dynamic programming to reduce complexity and rounding errors from state space discretisation
+	\item Using inverted system equations real valued controls could be used. But not all equations can be inverted and it is often non-trivial
+	\item Avoiding numerical issues by first defining the boundary line between feasible and infeasible states. This reduced computation costs by an order of magnitude.
+	\item Neuroevolution techniques have shown to be more effective on some benchmark tests than reinforcement learning techniques
+	\item NEAT is the current most successful algorithm within neuroevolutionary algorithms
+\end{itemize}
+
+\subsection{What is the author's contribution?}
+\begin{itemize}
+	\item Use of evolutionary algorithms instead of graph search algorithms
+	\item Application of a state-of-the-art evolutionary algorithm to the energy-optimal control problem
+\end{itemize}
+
+\subsection{How did the solution solve the addressed problem?}
+\begin{itemize}
+	\item By using the method of NEAT (NeuroEvolution of Augmented Topologies) the authors evolve a controller for an e-bike 
+	\item Use of simplified vehicle model 
+	\item Use of three motor commands
+	\item Evolutionary algorithms do not need to work in a discretized state space, so rounding errors are no problem
+	\item Evolutionary algorithms do not use state space models. Therefore increasing the complexity of the model does not have a huge effect on the space complexity.
+	\item Using a local solution that calculates new commands at every meter, a deggree of precision can be achieved that is not possible for graph search in most scenarios.
+\end{itemize}
+
+
+\subsection{Evaluation}
+\begin{itemize}
+	\item Comparison of performance on 35 routes with a Graph Search algorithm
+	\item Training of net using cross-validation
+	\item Training on 5 maps, testing on remaining 30
+	\item 50 training runs, each containing of evolving a population of size 150 for 1000 generations.
+	\item Comparison to graph search in three different resolution levels
+	\item Performance is only slightly worse than the highest depth graph.
+	\item Analysed in detail most solutions performed better
+	\item Computation time was nearly instantaneous versus about 1 minute for an 8km route
+	\item Space complexity was about 1KB versus 11GB
+\end{itemize}
+
+\subsection{Scientific Deficit}
+\begin{itemize}
+	\item The approach taken uses a very popular algorithm from evolutionary algorithms, but it does not use any techniques to ensure that the evolved controller will be able to run on a real device. Where the authors can give a prove of concept that an evolutionary algorithm may be better suited than a graph search approach, like this it probably is not usable in practise. Although giving prove of concept was the author's goal and this is not a scientific deficit but a shortcoming of this approach so far. 
+	\begin{itemize}
+		\item Miglino, O., Lund, H. H., \& Nolfi, S. (1995). Evolving mobile robots in simulated and real environments. Artificial life, 2(4), 417-434.
+	\item Jakobi, N., Husbands, P., \& Harvey, I. (1995). Noise and the reality gap: The use of simulation in evolutionary robotics. In Advances in artificial life (pp. 704-720). Springer Berlin Heidelberg.
+	\item Koos, S., Mouret, J. B., \& Doncieux, S. (2013). The transferability approach: Crossing the reality gap in evolutionary robotics. Evolutionary Computation, IEEE Transactions on, 17(1), 122-145.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Scientific Contribution}
+\begin{itemize}
+	\item The authors were able to show that using evolutionary algorithms for optimizing energy-efficient driving outperforms graph search algorithms in terms of computation time and space needed and produces solutions that are nearly as optimal as solutions from very detailed graph search algorithms.
+	\item As for this paper is very recent (2014) I am not able to quote any other work that supports my statement. Citeseer does not know this paper yet and google just gives one quote from a paper of the same authors.
+\end{itemize}
+\end{document}
